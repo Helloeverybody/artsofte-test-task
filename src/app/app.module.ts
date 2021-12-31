@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { TestComponent } from "./test_component/test.component";
-import { NewComponentComponent } from './new-component/new-component.component';
 import { AppRoutingModule } from "./routes.module";
+import { LayoutComponentComponent } from './layout-component/layout-component.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    NewComponentComponent
+    LayoutComponentComponent,
+    CompanyListComponent,
+    CompanyDetailComponent,
+    CompanyYandexMapComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

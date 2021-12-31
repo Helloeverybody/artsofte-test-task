@@ -1,0 +1,44 @@
+button{
+  border: solid 2px black;
+  width: 200px;
+  height: 50px;
+  font-family: "Book Antiqua";
+}
+
+button:hover{
+  background-color: darkseagreen;
+}
+
+.button1{
+  grid-area: b1;
+  margin: auto 30px auto auto;
+}
+
+.button2{
+  grid-area: b2;
+  margin: auto auto auto 30px;
+}
+
+.body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 50px 1fr;
+  grid-template-areas: "h h"
+  "b1 b2"
+  "c c";
+}
+
+.content{
+  border: solid 2px black;
+  padding: 20px;
+  width: 80%;
+  margin: 30px auto;
+  grid-area: c;
+}
+
+.page_heading{
+  margin: 30px auto;
+  font-family: Bahnschrift;
+  text-align: center;
+  grid-area: h;
+}

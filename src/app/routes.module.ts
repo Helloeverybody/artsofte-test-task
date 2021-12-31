@@ -1,13 +1,16 @@
 import {RouterModule, Routes} from "@angular/router";
 import {TestComponent} from "./test_component/test.component";
-import {NewComponentComponent} from "./new-component/new-component.component";
-import {NgModule} from "@angular/core";
+import { LayoutComponentComponent } from './layout-component/layout-component.component';
+import { CompanyListComponent } from './company-list/company-list.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
+import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
+import { NgModule } from "@angular/core";
 
 const routes: Routes = [
-  { path: '', component: TestComponent },
-  { path: 'list', component: NewComponentComponent },
-  { path: 'detail/:id', component: TestComponent },
-  { path: 'map', component: NewComponentComponent }
+  { path: '', component: CompanyListComponent },
+  { path: 'list', component: CompanyListComponent },
+  { path: 'detail/:id', component: CompanyDetailComponent },
+  { path: 'map', component: CompanyYandexMapComponent }
 ]
 
 @NgModule({
