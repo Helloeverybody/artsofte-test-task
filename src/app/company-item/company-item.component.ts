@@ -1,5 +1,5 @@
 import { Input, Component, OnInit } from '@angular/core';
-import {Company} from "../company";
+import {Company, Sample_Company} from "../company_interface";
 
 @Component({
   selector: 'app-company-item',
@@ -7,7 +7,7 @@ import {Company} from "../company";
   styleUrls: ['./company-item.component.css']
 })
 export class CompanyItemComponent implements OnInit {
-  @Input() company: Company = new Company()
+  @Input() company: Company = new Sample_Company()
 
   constructor() { }
 

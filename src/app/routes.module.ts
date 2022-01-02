@@ -8,7 +8,7 @@ import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   { path: '', component: CompanyListComponent },
-  { path: 'detail/:id', component: CompanyDetailComponent },
+  { path: 'detail/:id', component: CompanyDetailComponent, data: {va: 'Profile info'}},
   { path: 'list', component: CompanyListComponent },
   { path: 'map', component: CompanyYandexMapComponent }
 ]

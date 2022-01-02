@@ -1,4 +1,23 @@
-export class Company {
+export interface Company {
+  id: number
+  uid: string
+  business_name: string
+  suffix: string
+  industry: string
+  catch_phrase: string
+  buzzword: string
+  bs_company_statement: string
+  employee_identification_number: string
+  duns_number: string
+  logo: string
+  type: string
+  phone_number: string
+  full_address: string
+  latitude: number
+  longitude: number
+}
+
+export class Sample_Company {
   id: number = 0
   uid: string = ""
   business_name: string = "Sample Company"
@@ -18,6 +37,6 @@ export class Company {
 
   constructor() {
 
-  }
+}
 
 }

@@ -1,1 +1,23 @@
-<p>company-detail works!</p>
+<div>
+  <img [src]="company.logo" [ngClass]="{company_logo: true}">
+  <p [ngClass]="{company_name: true}">
+    <b>Название:</b> "{{company.business_name}} {{company.suffix}}"
+  </p>
+  <p [ngClass]="{company_detail: true}">
+    Род деятельности: {{company.industry}}
+  </p>
+  <p [ngClass]="{company_detail: true}">
+    Слоган: "{{company.catch_phrase}}"
+  </p>
+  <div>
+    <p [ngClass]="{company_detail: true}">
+      Контакты
+    </p>
+    <p [ngClass]="{company_detail: true}">
+      Номер телефона: {{company.phone_number}}
+    </p>
+    <p [ngClass]="{company_detail: true}">
+      Адрес: {{company.full_address}}
+    </p>
+  </div>
+</div>
