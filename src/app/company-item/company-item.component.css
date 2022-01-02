@@ -1,0 +1,24 @@
+.company_card{
+  padding: 10px;
+  border: solid 2px peachpuff;
+  background-color: beige;
+  margin-bottom: 5px;
+}
+
+.company_name{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Bahnschrift;
+}
+
+.company_logo{
+  width: 200px;
+  height: auto;
+}
+
+.company_detail{
+  font-family: Arial;
+  font-size: 14px;
+}
+
+

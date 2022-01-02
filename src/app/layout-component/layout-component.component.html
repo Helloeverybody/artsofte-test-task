@@ -1,7 +1,7 @@
 <div [ngClass]="{body: true}">
   <h1 [ngClass]="{page_heading: true}">Хаб компаний</h1>
-  <button [ngClass]="{button1: true}">Список</button>
-  <button [ngClass]="{button2: true}">Показать на карте</button>
+  <button [ngClass]="{button1: true}" routerLink="/">Список</button>
+  <button [ngClass]="{button2: true}" routerLink="/map">Показать на карте</button>
   <div [ngClass]="{content: true}">
     <router-outlet></router-outlet>
   </div>

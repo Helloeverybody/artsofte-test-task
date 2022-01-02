@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from "@angular/router";
-import {TestComponent} from "./test_component/test.component";
+import { TestComponent } from "./test_component/test.component";
 import { LayoutComponentComponent } from './layout-component/layout-component.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
@@ -8,8 +8,8 @@ import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   { path: '', component: CompanyListComponent },
-  { path: 'list', component: CompanyListComponent },
   { path: 'detail/:id', component: CompanyDetailComponent },
+  { path: 'list', component: CompanyListComponent },
   { path: 'map', component: CompanyYandexMapComponent }
 ]
 

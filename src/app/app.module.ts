@@ -8,6 +8,7 @@ import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyDetailComponent } from './company-detail/company-detail.component';
 import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
 import { FormsModule } from "@angular/forms";
+import { CompanyItemComponent } from './company-item/company-item.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from "@angular/forms";
     CompanyListComponent,
     CompanyDetailComponent,
     CompanyYandexMapComponent,
+    CompanyItemComponent,
   ],
   imports: [
     BrowserModule,

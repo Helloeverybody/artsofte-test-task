@@ -1,5 +1,5 @@
 <h2>Companies List</h2>
-<div [ngClass]="{company_card: true}" *ngFor="let company of companies">
-  <p [ngClass]="{company_name: true}">{{company.business_name}}</p>
-  <img [src]="company.logo" [ngClass]="{company_logo: true}">
+<div *ngFor="let company of companies; let i = index" [routerLink]="['detail', company.id]">
+  <app-company-item [company]="company"></app-company-item>
 </div>
+
