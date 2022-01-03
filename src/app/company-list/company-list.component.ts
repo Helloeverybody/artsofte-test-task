@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Companies} from "../companies";
-import {Company} from "../company_interface";
-import {ActivatedRoute} from "@angular/router";
-import {Subscription} from "rxjs";
+import {CompaniesService} from "../companies.service";
+import {HttpService} from "../data_getter.service";
 
 @Component({
   selector: 'app-company-list',
@@ -10,11 +8,17 @@ import {Subscription} from "rxjs";
   styleUrls: ['./company-list.component.css']
 })
 export class CompanyListComponent implements OnInit {
-  companies: Company[] = []
+  public companies: any = []
 
-  constructor() {
-    Companies.create_new_list(10)
-    this.companies = Companies.list
+  constructor(companies: CompaniesService, httpService: HttpService) {
+    if (CompaniesService.list === undefined){
+      httpService.getData(100).subscribe((data) => {
+        this.companies = data;
+        CompaniesService.list = data
+      })
+    } else {
+      this.companies = CompaniesService.list
+    }
   }
 
   ngOnInit(): void {

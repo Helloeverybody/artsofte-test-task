@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Company} from "../company_interface";
 import {ActivatedRoute} from "@angular/router";
-import {Companies} from "../companies";
+import {CompaniesService} from "../companies.service";
 import {Sample_Company} from "../company_interface";
-import {Subscription} from "rxjs";
+import {CompanyListComponent} from "../company-list/company-list.component";
 
 @Component({
   selector: 'app-company-detail',
@@ -16,7 +16,7 @@ export class CompanyDetailComponent implements OnInit {
   id: number
   constructor(private route: ActivatedRoute) {
     this.id = route.snapshot.params['id']
-    let company = Companies.list.find((comp) => comp.id == this.id)
+    let company = CompaniesService.list.find((comp: Company) => comp.id == this.id)
     this.company = company === undefined ? new Sample_Company() : company
   }
 

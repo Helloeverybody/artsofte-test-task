@@ -9,6 +9,9 @@ import { CompanyDetailComponent } from './company-detail/company-detail.componen
 import { CompanyYandexMapComponent } from './company-yandex-map/company-yandex-map.component';
 import { FormsModule } from "@angular/forms";
 import { CompanyItemComponent } from './company-item/company-item.component';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpService } from "./data_getter.service";
+import { CompaniesService } from "./companies.service";
 
 @NgModule({
   declarations: [
@@ -24,8 +27,9 @@ import { CompanyItemComponent } from './company-item/company-item.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpService, CompaniesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
