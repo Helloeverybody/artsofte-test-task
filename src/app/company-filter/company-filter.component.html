@@ -1,0 +1,15 @@
+<form [ngClass]="{filter_block: true}" [formGroup]="filterForm" #myForm="ngForm">
+  <b>Фильтры:</b><br>
+  <label>Имя компании </label><br>
+  <input type="text" formControlName="nameFilter" (change)="filter()"><br>
+
+  <label>Тип компании </label><br>
+  <select name="filter" formControlName="typeFilter" (change)="filter()">
+    <option *ngFor="let sort of typesList" [value]="sort">{{sort}}</option>
+  </select><br>
+
+  <label>Вид деятельности </label><br>
+  <select name="filter" formControlName="industryFilter" (change)="filter()">
+    <option *ngFor="let sort of industriesList" [value]="sort">{{sort}}</option>
+  </select>
+</form>
