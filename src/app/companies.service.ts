@@ -1,4 +1,4 @@
-import {HttpService} from "./data_getter.service";
+import {HttpService} from "./dataGetter.service";
 import {Injectable} from "@angular/core";
 
 @Injectable({providedIn: 'root'})

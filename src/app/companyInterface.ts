@@ -17,7 +17,7 @@ export interface Company {
   longitude: number
 }
 
-export class Sample_Company {
+export class SampleCompany {
   id: number = 0
   uid: string = ""
   business_name: string = "Sample Company"

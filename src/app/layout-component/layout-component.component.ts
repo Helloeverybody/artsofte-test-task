@@ -6,12 +6,8 @@ import {Component, NgModule, OnInit} from '@angular/core';
   styleUrls: ['./layout-component.component.css'],
 })
 export class LayoutComponentComponent implements OnInit {
-  text : string
-  constructor() {
-    this.text = 'Изменяемый текст'
-  }
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
+  ngOnInit(): void { }
 }
